@@ -19,12 +19,13 @@
     >
       <div id="subContainer" class="h-full w-full flex flex-col gap-24">
         <header class="flex justify-between p-8 items-center">
-          <h3 class="text-[20px] font-extrabold text-white">
+          <img src="./assets/mlLogo.png" alt="" class="size-12" />
+          <!-- <h3 class="text-[20px] font-extrabold text-white">
             MARK LEO BOSTRILLO
-          </h3>
+          </h3> -->
           <div
             id="navLinks"
-            class="font-light hidden sm:flex text-amber-50 gap-6 h-fit"
+            class="font-light hidden lg:flex text-amber-50 gap-6 h-fit"
           >
             <a
               href=""
@@ -54,11 +55,56 @@
             <!-- <a href="">CONTACT</a> -->
           </div>
           <button
-            class="flex gap-2 text-amber-50 items-center border-2 border-violet-500 hover:border-green-500 transition-color duration-300 hover:text-green-500 p-2 rounded-[8px]"
+            class="hidden sm:flex gap-2 text-amber-50 items-center sm:border-2 border-0 sm:border-violet-500 hover:border-green-500 transition-color duration-300 hover:text-green-500 p-2 rounded-[8px]"
           >
-            Let's Talk <i class="fa-solid fa-mobile-screen"></i>
+            Let's Talk
+            <i class="fa-solid fa-mobile-screen"></i>
           </button>
+          <div class="relative justify-center items-center flex lg:hidden p-0">
+            <i
+              id="menuIcon"
+              class="fa-solid fa-bars absolute text-3xl text-white"
+            ></i>
+            <i class="hidden fa-solid fa-xmark text-3xl text-white"></i>
+          </div>
         </header>
+        <!-- MOB NAV LINK -->
+        <div
+          id="mobNavLinkContainer"
+          class="bg-blue-950 h-full absolute mt-20 w-full"
+        >
+          <div
+            id="mobNavLinks"
+            class="flex flex-col lg:hidden gap-4 h-fit w-full text-white font-bold p-12 text-2xl"
+          >
+            <a
+              href=""
+              class="border-b-2 border-transparent hover:border-violet-500 w-fit"
+              >HOMEPAGE</a
+            >
+            <a
+              href="#projectSection"
+              class="border-b-2 border-transparent hover:border-violet-500 w-fit"
+              >PROJECT</a
+            >
+            <a
+              href="#aboutMeSection"
+              class="border-b-2 border-transparent hover:border-violet-500 w-fit"
+              >ABOUT ME</a
+            >
+            <a
+              href="#skillSection"
+              class="border-b-2 border-transparent hover:border-violet-500 w-fit"
+              >SKILLS</a
+            >
+            <a
+              href=""
+              class="border-b-2 border-transparent hover:border-violet-500 w-fit"
+              >EXPERIENCE</a
+            >
+            <!-- <a href="">CONTACT</a> -->
+          </div>
+        </div>
         <div
           id="bioContainer"
           class="text-amber-50 w-[600px] pl-8 pr-8 flex flex-col gap-4"
