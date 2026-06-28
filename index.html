@@ -11,293 +11,314 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="bg-slate-950 flex flex-col m-0 p-0 font-sans scroll-smooth">
-    <!-- HOMEPAGE -->
+  <body class="bg-slate-950 flex m-0 p-0 font-sans scroll-smooth">
     <div
-      id="homePage"
-      class="bg-[url('./assets/heroImg.png')] bg-cover bg-top bg-no-repeat h-screen flex flex-col"
+      id="mainContainer"
+      class="flex flex-col w-full items-center justify-center"
     >
-      <div id="subContainer" class="h-full w-full flex flex-col gap-24">
-        <header class="flex justify-between p-8 items-center">
-          <img src="./assets/mlLogo.png" alt="" class="size-12" />
-          <!-- <h3 class="text-[20px] font-extrabold text-white">
+      <!-- HOMEPAGE -->
+      <div
+        id="homePage"
+        class="bg-[url('./assets/heroImg.png')] bg-cover bg-top bg-no-repeat h-screen flex flex-col w-full"
+      >
+        <div id="subContainer" class="h-full w-full flex flex-col gap-24">
+          <header class="flex justify-between p-8 items-center">
+            <img src="./assets/mlLogo.png" alt="" class="size-12" />
+            <!-- <h3 class="text-[20px] font-extrabold text-white">
             MARK LEO BOSTRILLO
           </h3> -->
+            <div
+              id="navLinks"
+              class="font-light hidden lg:flex text-amber-50 gap-6 h-fit"
+            >
+              <a
+                href=""
+                class="border-b-2 border-transparent hover:border-violet-500"
+                >HOMEPAGE</a
+              >
+              <a
+                href="#projectSection"
+                class="border-b-2 border-transparent hover:border-violet-500"
+                >PROJECT</a
+              >
+              <a
+                href="#aboutMeSection"
+                class="border-b-2 border-transparent hover:border-violet-500"
+                >ABOUT ME</a
+              >
+              <a
+                href="#skillSection"
+                class="border-b-2 border-transparent hover:border-violet-500"
+                >SKILLS</a
+              >
+              <a
+                href=""
+                class="border-b-2 border-transparent hover:border-violet-500"
+                >EXPERIENCE</a
+              >
+              <!-- <a href="">CONTACT</a> -->
+            </div>
+            <button
+              class="hidden sm:flex gap-2 text-amber-50 items-center sm:border-2 border-0 sm:border-violet-500 hover:border-green-500 transition-color duration-300 hover:text-green-500 p-2 rounded-[8px]"
+            >
+              Let's Talk
+              <i class="fa-solid fa-mobile-screen"></i>
+            </button>
+            <div
+              class="relative justify-center items-center flex lg:hidden p-0"
+            >
+              <i
+                id="menuIcon"
+                class="fa-solid fa-bars absolute text-3xl text-white"
+              ></i>
+            </div>
+          </header>
+          <!-- MOB NAV LINK -->
           <div
-            id="navLinks"
-            class="font-light hidden lg:flex text-amber-50 gap-6 h-fit"
+            id="mobNavLinkContainer"
+            class="bg-blue-950 h-full absolute w-full flex-col p-8 gap-14 items-center hidden"
           >
-            <a
-              href=""
-              class="border-b-2 border-transparent hover:border-violet-500"
-              >HOMEPAGE</a
+            <img src="./assets/mlLogo.png" alt="" class="size-12" />
+            <div
+              id="mobNavLinks"
+              class="flex flex-col lg:hidden gap-4 h-fit w-full text-white font-bold text-2xl items-center"
             >
-            <a
-              href="#projectSection"
-              class="border-b-2 border-transparent hover:border-violet-500"
-              >PROJECT</a
+              <a
+                href=""
+                class="border-b-2 border-transparent hover:border-violet-500 w-fit"
+                >HOMEPAGE</a
+              >
+              <a
+                href="#projectSection"
+                class="border-b-2 border-transparent hover:border-violet-500 w-fit"
+                >PROJECT</a
+              >
+              <a
+                href="#aboutMeSection"
+                class="border-b-2 border-transparent hover:border-violet-500 w-fit"
+                >ABOUT ME</a
+              >
+              <a
+                href="#skillSection"
+                class="border-b-2 border-transparent hover:border-violet-500 w-fit"
+                >SKILLS</a
+              >
+              <a
+                href=""
+                class="border-b-2 border-transparent hover:border-violet-500 w-fit"
+                >EXPERIENCE</a
+              >
+              <!-- <a href="">CONTACT</a> -->
+            </div>
+            <button
+              id="closeNavBtn"
+              class="bg-violet-500 w-[90%] h-[50px] rounded-[8px] mt-5"
             >
-            <a
-              href="#aboutMeSection"
-              class="border-b-2 border-transparent hover:border-violet-500"
-              >ABOUT ME</a
-            >
-            <a
-              href="#skillSection"
-              class="border-b-2 border-transparent hover:border-violet-500"
-              >SKILLS</a
-            >
-            <a
-              href=""
-              class="border-b-2 border-transparent hover:border-violet-500"
-              >EXPERIENCE</a
-            >
-            <!-- <a href="">CONTACT</a> -->
+              <i class="fa-solid fa-xmark text-3xl text-white"></i>
+            </button>
           </div>
-          <button
-            class="hidden sm:flex gap-2 text-amber-50 items-center sm:border-2 border-0 sm:border-violet-500 hover:border-green-500 transition-color duration-300 hover:text-green-500 p-2 rounded-[8px]"
-          >
-            Let's Talk
-            <i class="fa-solid fa-mobile-screen"></i>
-          </button>
-          <div class="relative justify-center items-center flex lg:hidden p-0">
-            <i
-              id="menuIcon"
-              class="fa-solid fa-bars absolute text-3xl text-white"
-            ></i>
-            <i class="hidden fa-solid fa-xmark text-3xl text-white"></i>
-          </div>
-        </header>
-        <!-- MOB NAV LINK -->
-        <div
-          id="mobNavLinkContainer"
-          class="bg-blue-950 h-full absolute mt-20 w-full"
-        >
-          <div
-            id="mobNavLinks"
-            class="flex flex-col lg:hidden gap-4 h-fit w-full text-white font-bold p-12 text-2xl"
-          >
-            <a
-              href=""
-              class="border-b-2 border-transparent hover:border-violet-500 w-fit"
-              >HOMEPAGE</a
-            >
-            <a
-              href="#projectSection"
-              class="border-b-2 border-transparent hover:border-violet-500 w-fit"
-              >PROJECT</a
-            >
-            <a
-              href="#aboutMeSection"
-              class="border-b-2 border-transparent hover:border-violet-500 w-fit"
-              >ABOUT ME</a
-            >
-            <a
-              href="#skillSection"
-              class="border-b-2 border-transparent hover:border-violet-500 w-fit"
-              >SKILLS</a
-            >
-            <a
-              href=""
-              class="border-b-2 border-transparent hover:border-violet-500 w-fit"
-              >EXPERIENCE</a
-            >
-            <!-- <a href="">CONTACT</a> -->
+          <div id="bioContainer" class="text-amber-50 pl-8 pr-8 flex-col gap-4">
+            <h3 class="text-2xl">Hello, I'm</h3>
+            <h1 id="slogan" class="text-5xl font-bold">
+              Creative Developer <br />
+              &
+              <span id="ps" class="text-violet-500">Problem Solver</span>
+            </h1>
+            <p id="shortDescrip" class="font-medium text-xl">
+              I build modern, responsive and user-friendly websites and web
+              application
+            </p>
+            <section id="workCvBtn" class="grid gap-8 pt-8 w-full">
+              <button
+                id="vmwBtn"
+                class="w-full sm:w-[200px] h-[50px] bg-violet-500 hover:bg-green-500 hover:text-white transition-color duration-300 rounded-[8px] text-slate-950 font-bold"
+              >
+                View My Work
+              </button>
+              <button
+                id="dmcvBtn"
+                class="w-full sm:w-[200px] h-[50px] bg-transparent border-2 border-violet-500 hover:border-green-500 hover:text-green-500 rounded-[8px] transition-color duration-300 font-bold"
+              >
+                Download my CV
+              </button>
+            </section>
+            <section id="contacticons" class="flex gap-4">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-github"></i>
+              <i class="fa-brands fa-linkedin"></i>
+            </section>
           </div>
         </div>
-        <div
-          id="bioContainer"
-          class="text-amber-50 w-[600px] pl-8 pr-8 flex flex-col gap-4"
-        >
-          <h3 class="text-2xl">Hello, I'm</h3>
-          <h1 id="slogan" class="text-5xl font-bold">
-            Creative Developer <br />
-            &
-            <span id="ps" class="text-violet-500">Problem Solver</span>
-          </h1>
-          <p id="shortDescrip" class="font-medium text-xl w-[450px]">
-            I build modern, responsive and user-friendly websites and web
-            application
-          </p>
-          <section id="workCvBtn" class="flex gap-8 w-fit pt-8">
+      </div>
+      <!-- ABOUT SECTION -->
+      <div
+        id="aboutMeSection"
+        class="w-full h-fit flex flex-col p-8 gap-4 pt-16 pb-16 border-b-2 border-t-2 border-white/10 scroll-mt-90"
+      >
+        <h3 id="aboutMeLabel" class="text-violet-500">ABOUT ME</h3>
+        <div id="aboutMeBottom" class="w-full flex flex-col">
+          <section
+            id="moreWhoIam"
+            class="flex flex-col gap-2 justify-items-start"
+          >
+            <h1 class="text-3xl text-white">Who I am</h1>
+            <p id="aboutMepar" class="font-light text-white/80 text-[20px]">
+              I'm a 35-year-old aspiring web developer currently studying a
+              3-year Web Application Development course. I chose this career
+              because it combines two things I enjoy most: design and logic.
+            </p>
             <button
-              id="vmwBtn"
-              class="w-[200px] h-[50px] bg-violet-500 hover:bg-green-500 hover:text-white transition-color duration-300 rounded-[8px] text-slate-950 font-bold"
+              id="readMorebtn"
+              class="bg-transparent text-violet-500 border-violet-500 w-36 text-[12px] max-w-xs p-4 border-2 rounded-xl mt-5 flex gap-4 justify-center items-center hover:border-green-600 hover:text-green-600"
             >
-              View My Work
-            </button>
-            <button
-              id="dmcvBtn"
-              class="w-[200px] h-[50px] bg-transparent border-2 border-violet-500 hover:border-green-500 hover:text-green-500 rounded-[8px] transition-color duration-300 font-bold"
-            >
-              Download my CV
+              Red more <i class="fa-solid fa-arrow-right"></i>
             </button>
           </section>
-          <section id="contacticons" class="flex gap-4">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-brands fa-linkedin"></i>
+          <section
+            id="aboutMore"
+            class="w-full flex flex-col justify-end gap-8"
+          >
+            <div
+              class="bg-white/80 h-fit lg:h-48 lg:gap-2 flex gap-24 lg:flex-col rounded-xl p-6 text-gray-900 border-2 border-gray-900"
+            >
+              <i class="fa-solid fa-code text-2xl mb-8"></i>
+              <div class="flex flex-col w-fit">
+                <h1 class="text-5xl">2+</h1>
+                <h4>Years Experience</h4>
+              </div>
+            </div>
+            <div
+              class="bg-white/80 h-fit lg:h-48 lg:gap-2 flex gap-24 lg:flex-col rounded-xl p-6 text-gray-900 border-2 border-gray-900"
+            >
+              <i class="fa-solid fa-desktop text-2xl mb-8"></i>
+              <div class="flex flex-col w-fit">
+                <h1 class="text-5xl">1+</h1>
+                <h4>Projects</h4>
+              </div>
+            </div>
+            <div
+              class="bg-white/80 h-fit lg:h-48 lg:gap-2 flex gap-24 lg:flex-col rounded-xl p-6 text-gray-900 border-2 border-gray-900"
+            >
+              <i class="fa-regular fa-comments text-2xl mb-8"></i>
+              <div class="flex flex-col w-fit">
+                <h1 class="text-5xl">10+</h1>
+                <h4>Feedbacks</h4>
+              </div>
+            </div>
           </section>
         </div>
       </div>
-    </div>
-    <!-- ABOUT SECTION -->
-    <div
-      id="aboutMeSection"
-      class="w-full h-fit flex flex-col p-8 gap-4 pt-16 pb-16 border-b-2 border-t-2 border-white/10 scroll-mt-90"
-    >
-      <h3 id="aboutMeLabel" class="text-violet-500">ABOUT ME</h3>
-      <div id="aboutMeBottom" class="w-full flex">
-        <section
-          id="moreWhoIam"
-          class="size-1/3 flex flex-col gap-2 justify-items-start"
+      <!-- ABOUTE (MODAL) -->
+      <div
+        id="modalContainer"
+        class="fixed inset-0 bg-black/75 flex justify-center p-20 hidden"
+      >
+        <div
+          class="bg-white rounded-lg p-6 max-w-[1000px] w-full max-h-[90vh] overflow-y-auto flex flex-col justify-between"
         >
-          <h1 class="text-3xl text-white">Who I am</h1>
-          <p id="aboutMepar" class="font-light text-white/80 text-[20px]">
+          <p class="w-full text-xl break-words">
             I'm a 35-year-old aspiring web developer currently studying a 3-year
             Web Application Development course. I chose this career because it
-            combines two things I enjoy most: design and logic.
+            combines two things I enjoy most:
+            <span class="text-violet-500 font-bold">DESIGN & LOGIC.</span>
+            <br />
+            <br />
+            I enjoy creating clean, user-friendly interfaces and solving
+            problems through code. Every project gives me an opportunity to
+            learn new technologies, improve my skills, and turn ideas into
+            functional web applications.
+            <br />
+            <br />
+            As I continue my journey in web development, I am focused on
+            building modern, responsive, and accessible websites that provide a
+            great user experience. I am passionate about continuous learning and
+            excited to grow as a developer while contributing to meaningful
+            projects.
           </p>
+
           <button
-            id="readMorebtn"
-            class="bg-transparent text-violet-500 border-violet-500 w-36 text-[12px] max-w-xs p-4 border-2 rounded-xl mt-5 flex gap-4 justify-center items-center hover:border-green-600 hover:text-green-600"
+            id="modalCloseBtn"
+            class="border-2 border-violet-500 hover:border-green-500 hover:text-green-500 w-[80px] h-[40px] rounded-[8px]"
           >
-            Red more <i class="fa-solid fa-arrow-right"></i>
+            Close
           </button>
-        </section>
-        <section id="aboutMore" class="size-3/4 flex justify-end gap-8">
-          <div
-            class="bg-white/80 h-48 w-52 gap-2 flex flex-col rounded-xl p-6 text-gray-900 border-2 border-gray-900"
-          >
-            <i class="fa-solid fa-code text-2xl mb-8"></i>
-            <h1 class="text-5xl">2+</h1>
-            <h4>Years Experience</h4>
-          </div>
-          <div
-            class="bg-white/80 h-48 w-52 gap-2 flex flex-col rounded-xl p-6 text-gray-900 border-2 border-gray-900"
-          >
-            <i class="fa-solid fa-desktop text-2xl mb-8"></i>
-
-            <h1 class="text-5xl">1+</h1>
-            <h4>Projects</h4>
-          </div>
-          <div
-            class="bg-white/80 h-48 w-52 gap-2 flex flex-col rounded-xl p-6 text-gray-900 border-2 border-gray-900"
-          >
-            <i class="fa-regular fa-comments text-2xl mb-8"></i>
-
-            <h1 class="text-5xl">10+</h1>
-            <h4>Feedbacks</h4>
-          </div>
-        </section>
+        </div>
       </div>
-    </div>
-    <!-- ABOUTE (MODAL) -->
-    <div
-      id="modalContainer"
-      class="fixed inset-0 bg-black/75 flex justify-center p-20 hidden"
-    >
+      <!-- PROJECT SECTION -->
       <div
-        class="bg-white rounded-lg p-6 max-w-[1000px] w-full max-h-[90vh] overflow-y-auto flex flex-col justify-between"
+        id="projectSection"
+        class="flex flex-col w-full p-8 pt-16 pb-16 gap-7"
       >
-        <p class="w-full text-xl break-words">
-          I'm a 35-year-old aspiring web developer currently studying a 3-year
-          Web Application Development course. I chose this career because it
-          combines two things I enjoy most:
-          <span class="text-violet-500 font-bold">DESIGN & LOGIC.</span>
-          <br />
-          <br />
-          I enjoy creating clean, user-friendly interfaces and solving problems
-          through code. Every project gives me an opportunity to learn new
-          technologies, improve my skills, and turn ideas into functional web
-          applications.
-          <br />
-          <br />
-          As I continue my journey in web development, I am focused on building
-          modern, responsive, and accessible websites that provide a great user
-          experience. I am passionate about continuous learning and excited to
-          grow as a developer while contributing to meaningful projects.
-        </p>
-
-        <button
-          id="modalCloseBtn"
-          class="border-2 border-violet-500 hover:border-green-500 hover:text-green-500 w-[80px] h-[40px] rounded-[8px]"
-        >
-          Close
-        </button>
-      </div>
-    </div>
-    <!-- PROJECT SECTION -->
-    <div id="projectSection" class="flex flex-col w-full p-8 pt-16 pb-16 gap-7">
-      <div class="flex justify-between text-[14px] text-violet-500">
-        <a href="">PROJECTS</a>
-        <div
-          class="flex gap-2 items-center border-b-2 border-transparent hover:border-b-2 hover:border-b-violet-500"
-        >
-          <a href="">VIEW ALL PROJECTS</a
-          ><i class="fa-solid fa-arrow-right"></i>
+        <div class="flex justify-between text-[14px] text-violet-500">
+          <a href="">PROJECTS</a>
+          <div
+            class="flex gap-2 items-center border-b-2 border-transparent hover:border-b-2 hover:border-b-violet-500"
+          >
+            <a href="">VIEW ALL PROJECTS</a
+            ><i class="fa-solid fa-arrow-right"></i>
+          </div>
         </div>
-      </div>
-      <div class="flex flex-col gap-6">
-        <h2 class="text-2xl text-white font-bold">My Recent Work</h2>
-        <div class="flex justify-between">
-          <div class="w-80 h-80 bg-white/80 rounded-xl">PROJECT 1</div>
-          <div class="w-80 h-80 bg-white/80 rounded-xl">PROJECT 1</div>
-          <div class="w-80 h-80 bg-white/80 rounded-xl">PROJECT 1</div>
-        </div>
-        <div
-          id="skillSection"
-          class="p-8 flex flex-col gap-4 border-2 border-violet-500 rounded-[20px]"
-        >
-          <p class="text-violet-500">SKILLS</p>
-          <h1 class="text-2xl text-white font-bold">
-            Technologies I work with
-          </h1>
-          <div class="flex justify-evenly p-8 bg-white/80 rounded-[12px]">
-            <label for="" class="flex items-center gap-4 text-blue-950"
-              ><i class="fa-brands fa-html5 text-5xl"></i>HTML5</label
-            >
-            <label for="" class="flex items-center gap-4 text-blue-950"
-              ><i class="fa-brands fa-css3 text-5xl"></i>CSS</label
-            >
-            <!-- <label for=""
+        <div class="flex flex-col gap-6">
+          <h2 class="text-2xl text-white font-bold">My Recent Work</h2>
+          <div class="flex justify-between">
+            <div class="w-80 h-80 bg-white/80 rounded-xl">PROJECT 1</div>
+            <div class="w-80 h-80 bg-white/80 rounded-xl">PROJECT 1</div>
+            <div class="w-80 h-80 bg-white/80 rounded-xl">PROJECT 1</div>
+          </div>
+          <div
+            id="skillSection"
+            class="p-8 flex flex-col gap-4 border-2 border-violet-500 rounded-[20px]"
+          >
+            <p class="text-violet-500">SKILLS</p>
+            <h1 class="text-2xl text-white font-bold">
+              Technologies I work with
+            </h1>
+            <div class="flex justify-evenly p-8 bg-white/80 rounded-[12px]">
+              <label for="" class="flex items-center gap-4 text-blue-950"
+                ><i class="fa-brands fa-html5 text-5xl"></i>HTML5</label
+              >
+              <label for="" class="flex items-center gap-4 text-blue-950"
+                ><i class="fa-brands fa-css3 text-5xl"></i>CSS</label
+              >
+              <!-- <label for=""
               ><i class="fa-brands fa-tailwind-css text-6xl"></i>TAILWIND</label
             > -->
-            <label for="" class="flex items-center gap-4 text-blue-950"
-              ><i class="fa-brands fa-js text-5xl"></i>JAVASCRIPT</label
-            >
-            <label for="" class="flex items-center gap-4 text-blue-950"
-              ><i class="fa-brands fa-react text-5xl"></i>REACT</label
-            >
+              <label for="" class="flex items-center gap-4 text-blue-950"
+                ><i class="fa-brands fa-js text-5xl"></i>JAVASCRIPT</label
+              >
+              <label for="" class="flex items-center gap-4 text-blue-950"
+                ><i class="fa-brands fa-react text-5xl"></i>REACT</label
+              >
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- LETS BUILD TOGEHTHER -->
-    <div
-      id="lbt"
-      class="h-48 flex justify-between items-center bg-blue-950 p-8"
-    >
-      <h1 class="text-3xl w-[400px] text-amber-50 font-bold">
-        Let's build something amazing
-        <span class="text-violet-500 font-bold">together</span>
-      </h1>
-      <button
-        class="flex items-center gap-4 bg-violet-500 rounded-[10px] p-4 text-white shadow-2xl shadow-violet-500/50"
+      <!-- LETS BUILD TOGEHTHER -->
+      <div
+        id="lbt"
+        class="h-48 flex justify-between items-center bg-blue-950 p-8"
       >
-        Get In Touch
-        <i class="fa-solid fa-arrow-right"></i>
-      </button>
+        <h1 class="text-3xl w-[400px] text-amber-50 font-bold">
+          Let's build something amazing
+          <span class="text-violet-500 font-bold">together</span>
+        </h1>
+        <button
+          class="flex items-center gap-4 bg-violet-500 rounded-[10px] p-4 text-white shadow-2xl shadow-violet-500/50"
+        >
+          Get In Touch
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+      <footer class="flex justify-between p-6 items-center h-fit">
+        <h1 class="text-violet-500">Mark Leo Bostrillo</h1>
+        <p class="font-light text-[12px] text-white/50">
+          &copy; 2024 Your Name. All rights reserved.
+        </p>
+        <button class="w-[40px] h-[40px] bg-violet-500 rounded-[4px]">
+          <a href="#homePage"><i class="fa-solid fa-angle-up"></i></a>
+        </button>
+      </footer>
     </div>
-    <footer class="flex justify-between p-6 items-center h-fit">
-      <h1 class="text-violet-500">Mark Leo Bostrillo</h1>
-      <p class="font-light text-[12px] text-white/50">
-        &copy; 2024 Your Name. All rights reserved.
-      </p>
-      <button class="w-[40px] h-[40px] bg-violet-500 rounded-[4px]">
-        <a href="#homePage"><i class="fa-solid fa-angle-up"></i></a>
-      </button>
-    </footer>
 
     <script src="script.js"></script>
   </body>
